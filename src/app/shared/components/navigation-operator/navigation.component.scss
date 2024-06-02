@@ -1,0 +1,75 @@
+.header{
+    width: 100%;
+    background: linear-gradient(to right, #0ee9ef, #324DF9);
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+//  &__h1{
+//      color: yellow;
+//   }
+
+  &__a{
+     text-decoration: none;
+     color: white;
+}
+ 
+&__button{
+    display: none;
+    cursor: pointer;
+    @media screen and (max-width: 580px) {
+        display: flex;
+    }
+}
+&__svg{
+    width: 2em;
+    height: 2em;
+    fill: white;
+}
+
+&__nav{
+
+    @media  screen and (max-width: 580px) {
+        width: 100%;
+
+      //animacion
+        height: 0vh;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+        pointer-events: none;
+        transition: all .5s ease;
+
+        &--activo{
+         
+            height: 50vh;
+            pointer-events: auto;
+        }
+    }
+}
+
+&__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (max-width: 580px){
+        flex-direction: column;
+    }
+}
+&__li{
+    margin: 0 .5em;
+    @media screen and (max-width: 580px) {
+        margin: .5em 0;
+    }
+}
+}

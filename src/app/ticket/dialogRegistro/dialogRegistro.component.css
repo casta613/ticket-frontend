@@ -1,0 +1,26 @@
+mat-form-field {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+form {
+    width: 350px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: gray;
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acordeon {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}

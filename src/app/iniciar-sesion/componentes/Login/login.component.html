@@ -1,0 +1,61 @@
+<div class="container-fluid vh-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-md-9 col-lg-6 col-xl-5">
+
+      <img src="assets/img/it.png" class="img-fluid" alt="Sample image">
+
+    </div>
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div *ngIf="!esCodigo">
+        <form [formGroup]="form">
+          <h1 class="text-center mb-5">Iniciar Sesion</h1>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" formControlName="usuario" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Ingrese un correo electronico valido" />
+            <label class="form-label" for="form3Example3">Correo Electronico</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" formControlName="contraseña" class="form-control form-control-lg"
+              placeholder="Ingrese contraseña" />
+            <label class="form-label" for="form3Example4">contraseña</label>
+          </div>
+
+
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"
+              (click)="acceder()">Iniciar Sesion</button>
+            <!--<p class="small fw-bold mt-2 pt-1 mb-0">Aun no tengo cuenta? <button
+              (click)="registrarse()">Registrarse</button>
+          </p>-->
+          </div>
+
+        </form>
+      </div>
+      <div *ngIf="esCodigo">
+        <form [formGroup]="formValidacion">
+          <h1 class="text-center mb-5">Validar Codigo</h1>
+          <div *ngIf="qrValue" class="center-img">
+            <p>Debe escanear el siguiente codigo QR con la app de Google Authenticator</p>
+            <img [src]="qrValue" class="img-fluid" alt="QR Code">
+          </div>
+          <div class="form-outline mb-4">
+            <input formControlName="codigo" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Ingrese su codigo" />
+            <label class="form-label" for="form3Example3">Codigo</label>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"
+              (click)="validarCodigo()">Continuar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

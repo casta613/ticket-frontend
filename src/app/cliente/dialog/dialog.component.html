@@ -1,0 +1,19 @@
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-container">
+    <mat-grid-list cols="1" rowHeight="200px">
+
+      <mat-form-field class="form-field">
+        <input matInput formControlName="Nombre" placeholder="Nombre">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput formControlName="Telefono" placeholder="Teléfono">
+      </mat-form-field>
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="button-container">
+    <button mat-raised-button (click)="agregar()" class="save-button">Agregar</button>
+    <button mat-raised-button (click)="cerrarDialogo()" class="cancel-button">Cancelar</button>
+  </div>
+</mat-dialog-actions>

@@ -1,0 +1,35 @@
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-container">
+    <mat-grid-list cols="1" rowHeight="400px">
+
+
+      <mat-label>Encargado</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDUsuario">
+          <mat-option *ngFor="let encargado of listaUsuario" [value]="encargado.ID">
+            {{ encargado.Nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-label>Equipo</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDEquipo">
+          <mat-option *ngFor="let equipo of listaEquipo" [value]="equipo.ID">
+            {{ equipo.Nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="button-container">
+    <button mat-raised-button (click)="agregar()" class="save-button">Agregar</button>
+    <button mat-raised-button (click)="cerrarDialogo()" class="cancel-button">Cancelar</button>
+  </div>
+</mat-dialog-actions>

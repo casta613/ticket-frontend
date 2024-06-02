@@ -1,0 +1,31 @@
+<header class="header">
+
+    <h1 class="header__h1">
+        <a href="#" class="header__a" style="font-size: 40px;">SISTEMA DE TICKETS</a>
+    </h1>
+
+    <button (click)=" setActive() " class="header__button">
+        <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </button>
+
+    <nav class="header__nav" [ngClass]="{ 'header__nav--activo' : active }">
+        <ul class="header__ul">
+            <li *ngIf="isRouteAllowed(1)" class="header__li"><a routerLink="/tickets" class="header__a">Tickets</a></li>
+            <li *ngIf="isRouteAllowed(2)" class="header__li"><a routerLink="/usuarios" class="header__a">Usuarios</a>
+            </li>
+            <li *ngIf="isRouteAllowed(3)" class="header__li"><a routerLink="/areas" class="header__a">Areas</a></li>
+            <li *ngIf="isRouteAllowed(4)" class="header__li"><a routerLink="/equipos" class="header__a">Equipos</a></li>
+            <li *ngIf="isRouteAllowed(7)" class="header__li"><a routerLink="/encargados"
+                    class="header__a">Encargados</a></li>
+            <li *ngIf="isRouteAllowed(5)" class="header__li"><a routerLink="/plantillas-ticket"
+                    class="header__a">Plantillas Ticket</a></li>
+            <li class="header__li"><a routerLink="/inicio-sesion" class="header__a">Cerrar Sesion</a></li>
+        </ul>
+    </nav>
+
+
+</header>

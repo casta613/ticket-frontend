@@ -1,0 +1,46 @@
+<mat-dialog-content>
+
+  <form [formGroup]="form" class="form-container">
+    <mat-grid-list cols="1" rowHeight="400px">
+
+      <mat-label>Plantilla</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDPlantilla">
+          <mat-option *ngFor="let plantilla of listaPlantilla" [value]=" plantilla.ID">
+            {{ plantilla.Titulo }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <label for="Descripcion">Descripcion</label>
+      <mat-form-field class="form-field">
+        <textarea matInput formControlName="Descripcion"></textarea>
+      </mat-form-field>
+
+      <mat-label>Prioridad</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDPrioridad">
+          <mat-option *ngFor="let prioridad of listaPrioridad " [value]=" prioridad.ID">
+            {{ prioridad.Nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-label>Estado</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDEstado">
+          <mat-option *ngFor="let estado of listaEstado" [value]=" estado.ID">
+            {{ estado.Nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="button-container">
+    <button mat-raised-button (click)="agregar()" class="save-button">Agregar</button>
+    <button mat-raised-button (click)="cerrarDialogo()" class="cancel-button">Cancelar</button>
+  </div>
+</mat-dialog-actions>

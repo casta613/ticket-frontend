@@ -1,0 +1,32 @@
+<!-- dialog-agencia.component.html -->
+
+<mat-dialog-content>
+    <form [formGroup]="form" class="form-container">
+        <mat-grid-list cols="1" rowHeight="80px">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="Usuario" placeholder="Usuario">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <input type="password" matInput formControlName="Contraseña" placeholder="Contraseña">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <input type="password" matInput formControlName="RespetirContraseña"
+                        placeholder="RespetirContraseña">
+                </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="button-container">
+        <button class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem"
+            (click)="registrar()">Registrar</button>
+        <button class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem"
+            (click)="cerrarDialogo()">Cancelar</button>
+    </div>
+</mat-dialog-actions>

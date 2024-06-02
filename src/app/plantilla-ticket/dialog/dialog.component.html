@@ -1,0 +1,32 @@
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-container">
+    <mat-grid-list cols="1" rowHeight="400px">
+
+
+
+      <label for="Titulo">Titulo</label>
+      <mat-form-field class="form-field">
+        <input matInput formControlName="Titulo">
+      </mat-form-field>
+
+      <mat-label>Area Trabajo</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="IDArea">
+          <mat-option *ngFor="let areaTrabajo of listaAreaTrabajo" [value]="areaTrabajo.ID">
+            {{ areaTrabajo.Nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="button-container">
+    <button mat-raised-button (click)="agregar()" class="save-button">Agregar</button>
+    <button mat-raised-button (click)="cerrarDialogo()" class="cancel-button">Cancelar</button>
+  </div>
+</mat-dialog-actions>

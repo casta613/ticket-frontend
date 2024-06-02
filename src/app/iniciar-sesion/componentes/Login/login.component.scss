@@ -1,0 +1,25 @@
+.btn{
+    padding: .5rem .3rem;
+
+    ::hover{
+        background-color: blue;
+    }
+}
+
+
+input {
+    outline: none;
+    :focus{
+        border: red;
+    }
+}
+
+
+  
+  .center-img {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+  }
+  

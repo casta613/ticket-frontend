@@ -1,0 +1,18 @@
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+    height: 100vh;          /* Altura del contenedor */
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+    
